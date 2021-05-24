@@ -333,7 +333,8 @@ The "`<p>`" element is used to create paragraphs of text. Each block of text def
 
     <h1>Welcome to my page about cute animals!</h1>
     
-    <p>Hi! My name is Fido! I love collecting cute animal pictures!</p>
+    <p>Hi! My name is Fido! I love collecting
+       cute animal pictures!</p>
 
     <p>I hope you enjoy the pictures that I've collected.</p>
 
