@@ -1,4 +1,4 @@
-% Day 2 on Semantics
+% Day 3 on HTML Semantics
 % Sponsored by GOOGLE!
 
 # Review
@@ -250,3 +250,9 @@ The footer is in a weird spot. We need to move it back to the bottom of the page
     }
 
 The `clear` property tells elements to stop floating! It will move back to the bottom of the screen.
+
+# Rest of Class
+
+## For the rest of class
+
+For the rest of class, build your ideal website. Combine all of the elements we've covered in the past classes into a beautiful website. We'll be floating around the room to help you with your designs.
