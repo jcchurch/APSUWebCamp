@@ -12,29 +12,54 @@ What did we talk about in the last class?
 
 ## All of the tags we learned.
 
-!DOCTYPE html head meta title body h1 h2 h3 h4 h5 h6 p img
+- Tags
+    - !DOCTYPE html head meta title body h1 h2 h3 h4 h5 h6 p img a ul ol li link
+- Properties
+    - class, id
+- Ideas
+    - CSS, The Box Model (content, padding, border, and margin)
 
 ## Let's code a fresh website from scratch.
 
-Let's build a complete website using most of what we learned yesterday.
+Let's use http://jsfiddle.net to explore some of these items.
 
-## Play the video on Internet Safety
+- Create a heading of size `h2`.
+- Create an unordered list.
+- Create a link to the Google website.
+
+## Play the video on Passwords
 
 . . .
 
 What did you think?
 
-## Three take-aways
+## My take-aways
 
-- Oversharing on social media.
-    - Don't let people take advantage of you because of the things you share by being selective about what you share.
-    - Don't share things about people you know without their consent.
-- Turn off accounts which you don't care about.
-    - You aren't obligated to follow anyone and no one is obligated to follow you.
-- Don't compare your hidden life to another person's highlight reel.
-    - In other words, everyone has flaws so don't worry about it when other people seem flawless.
-- Finally, computer-related addition is real, so know when to walk away when it is too much.
-    - People with addictions aren't bad. They just need a little help.
+Here are my tips for passwords.
+
+- Make them long.
+- Make them random.
+- Make them different.
+- Store them in a password manager.
+- Don't memorize your passwords.
+
+## Password Managers
+
+Pick one and store your passwords. Make sure they are all long, random, and different.
+
+- bitwarden
+- Last Pass
+- 1password
+- myki
+
+## Finally, use 2FA.
+
+- Lots of websites offer something called "Two Factor Authentication" or "2FA".
+- This requires that you install a special authentication application (like **Authy**) to your phone.
+- After you log into a website, the website will ask you to type in a code from the app on your phone.
+- Turn this feature on for every website that offers 2FA.
+    - Websites that offer 2FA: Google, Facebook, Instagram, Amazon, Twitch, and Twitter.
+- 2FA is a second step to logging into a website, but it makes it harder for hackers to get in.
 
 # Design Time
 
@@ -98,9 +123,11 @@ Next, we add example content to those basic areas.
 It's time to code your website. Follow along. Let's start with the `header` tag. Add this to your body. Obviously, you'll want to replace your page title and author with your name and title.
 
     <header>
-        <img src="puppy.png" alt="a cute puppy">
-        <h1>Cute Animal Pictures</h1>
-        <p>By Fido the Pupper</b>
+        <img src="puppy.png" alt="a cute puppy" id="logo">
+        <ul>
+            <li><h1>Cute Animal Pictures</h1></li>
+            <li>By Fido the Pupper</li>
+        </ul>
     </header>
 
 ## Let's code the main section.
@@ -109,13 +136,16 @@ Let's code the main section. I've got three images I'd like to display.
 
     <main>
         <h2>Check out this cool cat.</h2>
-        <img src="coolcat.png" alt="a cool cat">
+        <img src="coolcat.png" alt="a cool cat"
+             class="animal">
         
         <h2>Check out this adorable iguana.</h2>
-        <img src="iguana.png" alt="a lovable iguana">
+        <img src="iguana.png" alt="a lovable iguana"
+             class="animal">
 
         <h2>Check out this serious turtle.</h2>
-        <img src="turtle.png" alt="a serious turtle">
+        <img src="turtle.png" alt="a serious turtle"
+             class="animal">
     </main>
 
 ## Let's code our sidebar
@@ -146,7 +176,8 @@ The footer usually contains a copyright date.
 You can change each section of your website's color by naming the tag and changing the background color. Here, we change the background color of the `header` to red and the `main` to aqua. This code is added to `style.css`.
 
     header {
-        background: red;
+        background: gold;
+        text-align: center;
     }
 
     main {
@@ -160,12 +191,12 @@ Once you change these colors, change the `footer` and the `aside` to different c
 Everything in HTML has a width. By default, all of our sections take up 100% of the screen. We can change this. Let's have `main` and `aside` take up less width.
 
     main {
-        /* ... */
-        width: 60%;
+        background: aqua;
+        width: 50%;
     }
 
     aside {
-        /* ... */
+        background: violet;
         width: 35%;
     }
 
@@ -176,8 +207,8 @@ Save your file and check out the results.
 We want the main to be on the left side of the screen and the sidebar to be on the right.
  
     main {
-        /* ... */
-        width: 60%;
+        background: aqua;
+        width: 50%;
         float: left;
     }
 
@@ -188,7 +219,7 @@ Save your work and check it out. When elements float, elements below that elemen
 You guessed it: we can make the sidebar move to the right.
 
     aside {
-        /* ... */
+        background: violet;
         width: 35%;
         float: right;
     }
@@ -200,14 +231,40 @@ Does this cause any problems? Check out the footer. Remember: when elements floa
 The footer is in a weird spot. We need to move it back to the bottom of the page.
 
     footer {
-        /* ... */
+        background: cornflowerblue;
         clear: both;
     }
 
 The `clear` property tells elements to stop floating! It will move back to the bottom of the screen.
+
+## Our page is looking ugly.
+
+I think our images are too big. Let's reduce their size.
+
+    #logo {
+        width: 50%;
+    }
+
+    .animals {
+        width: 80%;
+    }
+
+## Our page is (still) looking ugly.
+
+Here's a trick. Use the astricks (*) to apply to every element!
+
+    * {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
 
 # Rest of Class
 
 ## For the rest of class
 
 For the rest of class, build your ideal website. Combine all of the elements we've covered in the past classes into a beautiful website. We'll be floating around the room to help you with your designs.
+
+## Please keep your code
+
+We'll be using this code for our projects for the rest of the week.
