@@ -177,7 +177,6 @@ You can change each section of your website's color by naming the tag and changi
 
     header {
         background: gold;
-        text-align: center;
     }
 
     main {
@@ -185,6 +184,17 @@ You can change each section of your website's color by naming the tag and changi
     }
 
 Once you change these colors, change the `footer` and the `aside` to different colors.
+
+## Centering Things
+
+You can center anything in a container using this property.
+
+    header {
+        background: gold;
+        text-align: center; /* Added Line */
+    }
+
+Based on the name, you'd think this only centers text, but really, it will center anything inside of the container. It's handy to remember.
 
 ## Controlling Width
 
@@ -251,9 +261,9 @@ I think our images are too big. Let's reduce their size.
 
 ## Our page is (still) looking ugly.
 
-Here's a trick. Use the astricks (*) to apply to every element!
+Here's a trick. List these elements and separate them the comma to apply this padding.
 
-    * {
+    header, main, aside, footer {
         margin: 10px;
         padding: 10px;
         border-radius: 20px;
