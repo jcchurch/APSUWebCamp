@@ -5,7 +5,10 @@
 
 ## Today's class
 
-Today's class will start with yesterday's code. Try to find it.
+Today's class will start with yesterday's code. Try to find it. Today, we'll be exploring some more advanced features of HTML and CSS.
+
+- Links have so many features that need exploring.
+- Libraries to create unique icons on the screen.
 
 ## Let's review
 
@@ -79,23 +82,117 @@ You can manipulate almost anything in CSS, even links. There are five properties
 
 ## CSS Links
 
-Here's some HTML code. Drop this into http://jsfiddle.net.
+Go to http://jsfiddle.net and type this into the HTML section.
 
-    <a href="http://apsu.edu" id="apsu">Austin Peay</a>
+    <a href="http://edu.google.edu">Google Education</a>
 
-Here's the CSS to try.
+Type this into the CSS section.
 
-    a:link { font-size: 50%; color: red; }
+    a:link { color: red; }
     a:visited { color: blue; }
     a:hover { font-size: 200%; color: pink; }
     a:focus { font-size: 200%; color: green; }
     a:active { font-size: 250%; color: purple; }
 
+## CSS Links
+
+We want you to play with the five different ways you can interact with a link (ignore it, visit it, hover, focus, and actively click) before moving on.
+
+# Fonts
+
+## Web Safe Fonts
+
+- For this next part, it would be best if you did a Google search for "web safe fonts".
+    - This is the website site we want you to see.
+    - https://www.w3schools.com/cssref/css_websafe_fonts.asp
+- Fonts are a tricky subject: in order to see text using a particular font, your computer must have the font.
+    - Not every computer has the same fonts installed.
+- There are a limited number of fonts that most computers have. These are called "web safe fonts".
+- The CSS property that controls fonts is called the `font-family` property. Let's see it in action.
+
+## Testing Web Safe Fonts
+
+Go to http://jsfiddle.net and type this into the HTML section.
+
+    <p>This is regular text.</p>
+    <p id="special">This is special text.</p>
+
+When you run this code, both sentences will look the same on the screen.
+
+## Testing Web Safe Fonts
+
+Type this into the CSS section.
+
+    p {
+        font-size: 200%;
+    }
+    #special {
+        font-family: Arial, sans-serif;
+    }
+
+You'll notice that there are two fonts mentioned! That's because websites need backup fonts. Here, we are testing Arial, but "sans-serif" is our backup.
+
+## Testing Web Safe Fonts
+
+In the last example, we tested "Arial", but there are many others.
+
+- Verdana
+- Helvetica
+- Tahoma
+- Georgia
+
+We want you to test at least three more font families before moving on. In each example, change "Arial", but keep "sans-serif" the same.
+
+## An External Library for Fonts
+
+But what if you want more fonts? Crazy fonts? Fun fonts? Serious fonts?
+
+We are going to introduce our first **external library**. An **external library** gives us the ability to do things that would normally take us a long time to develop on our own. Nearly all professional programmers use external libraries to speed up development because programming is slow and its better when we all work together.
+
+Go to this website: https:/fonts.google.com
+
+## Google Fonts
+
+Google has a large collection of special fonts, but they require a little extra work to get them on your website. They don't work just by typing them into your CSS code.
+
+When seaching for fonts, I found a neat one called "Emblema One." Maybe you can find a neat font too.
+
+## Finding the Perfect Font
+
+When you find a font that you like, look for the words "Select this style". Two textboxes will appear.
+
+- The first has the external library code in it. Copy and past this code into the HTML section of your jsfiddle page. This normally goes in the `<head>` tag on your website.
+- The second textbook has the `font-family` code. Copy this line over your `font-family` line in the CSS section on jsfiddle.
+
+Keep this tab open to your font. We're going to try to use it later.
+
+## An External Library for icons
+
+Google has another external library for icons. Icons aren't images and don't have the same limitations as images. They scale and you can change their color with CSS. We can find the icons on the same Google Fonts website.
+
+To find the external library, you'll need to click on "Developer Guide" and then scroll down to the section "Setup Method 1. Using via Google Fonts".
+
+The library provided only supports "Filled" icons, so you'll need to set the search to the "Filled" icons.
+
+## Try this out.
+
+Here is the library that I added to my HTML section (or `<head>` section of your website). (Don't type this in. Try to find it on the Google website.)
+
+    <link href=
+    "https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+And here's the code to get a home icon to appear:
+
+    <span class="material-icons-outlined">home</span>
+
+What's great is that these icons will look great at any scale.
+
 # Menus
 
 ## Menus
 
-Our goal in this next project is to build a menu for our website.
+Our goal in this next project is to build a menu for our website. To make this fully work, I added our Google Font library and our Google Icons library to our `<head>` section of our website from yesterday. If you can't find your website from yesterday, you can use our starter code.
 
 ## An unordered list of links
 
@@ -109,245 +206,83 @@ We need an unordered list of links.
     </ul>
     </nav>
 
-## The beginnings.
-
-![Our unordered list of links with no CSS.](images/navbar_before.png)
-
 ## Apply some simple CSS
 
-    #nav_bar ul {
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-    }
-    #nav_bar li {
-        display: inline;
-        float: left;
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      background: darkred;
+      border-radius: 20px;
     }
 
-## When we inline these elements.
-
-![Our unordered list of links with inline CSS.](images/navbar_inline.png)
+We recommend that you type each property starting with "list-style-type: none;" and test what it does before moving on to the next line. There are four lines to test. This is the first time to see two of these properties. Which two are new? What will happen?
 
 ## Add more code to "li".
 
-    #nav_bar li {
-        display: inline;
-        float: left;
-        padding: 15px;
-        background-color: red;
-        border: 1px solid black;
+    nav li {
+      padding: 20px;
+      font-family: Verdana;
+      color: AntiqueWhite;
+      font-size: 150%;
+      text-decoration: none;
     }
 
-## Now with some color
+You may notice that we are using "nav ul" and "nav li". This means that we only manipulate the "ul" and "li" elements that appear inside of "nav" tags. If there is another list on the page, it won't be modified.
 
-![We added some spacing, color, and a border.](images/navbar_color.png)
+## Add color to the text
 
-## Let's play with the text
+Here, we change the color of the text to something that is almost white. We also remove the underline from the link.
 
-More CSS.
-
-    #nav_bar a {
-        color: white;
-        text-shadow: 2px 2px 2px black;
-    }
-    #nav_bar li:hover, #nav_bar li:focus {
-        background-color: firebrick;
+    nav a {
+      color: AntiqueWhite;
+      text-decoration: none;
     }
 
-Here, we force the text to be white and we add a black dropshadow to the text. Also, when the mouse hovers over one of the menu items, the background color turns to "firebrick". (I love the word "firebrick.")
+## Add the hover effects
 
-## Navigational Bar: Final Version
+Finally, when the user hovers their mouse over the link, we want the background color of the element to change and the underline to reappear.
 
-![The dropshadow and the hover effect looks good.](images/navbar_final.png)
+    nav li:hover {
+      background: brown;
+    }
 
-There is a lot more that we could do to improve the look of this navigational menu, like change the font family. A good designer might consider this a starting point. From a technical perspective, I think this works.
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-# Images
+## Let's add icons.
 
-## Images
+For this, you'll need make sure the icons library is loaded in the `<head>` section of your html page.
 
-Let's talk about this HTML.
+- For APSU, I found the icon "school".
+- For Google, I found the icon "search".
+- For BongoCat, I found the icon "pet".
 
-    <img src="khan.png" alt="Khan the Iguana">
-    Khan is a male green iguana that is 13 years old.
-    His favorite foods are bananas and raspberries.
-    His favorite activites are watching people passing by his window.
+I searched all three of these terms in the icon search (make sure you get the "Filled" version) and worked them into my HTML.
 
-## Text Images: Bottom Alignment
+## HTML for my finished menu.
 
-By default, text aligns with the bottom of the image.
+    <nav>
+        <ul>
+        <li><span class="material-icons">school</span>
+            <a href="http://apsu.edu">APSU</a></li>
+        <li><span class="material-icons">search</span>
+            <a href="https://google.com">Google</a></li>
+        <li><span class="material-icons">pets</span>
+            <a href="http://bongo.cat">Bongo Cat</a></li>
+        </ul>
+    </nav>
 
-![Text alignment at the bottom of the image.](images/image_alignment_bottom.png)
+## Let's add the Google Font
 
-## Text Images: Middle Alignment
+Again, for this, you'll need make sure the fonts library is loaded in the `<head>` section of your html page. I replaced the `font-family` line with this:
 
-    img { vertical-align: middle; }
+    font-family: Emblema One, sans-serif;
 
-![Text alignment at the middle of the image.](images/image_alignment_middle.png)
+That's it. Our menu is done.
 
-## Text Images: Top Alignment
+# Rest of Class
 
-    img { vertical-align: top; }
+## Rest of Class
 
-![Text alignment at the top of the image.](images/image_alignment_top.png)
-
-## When to use vertical-align
-
-- You should use vertical-align if you have a small amount of text to be displayed. Anything beyond your text block is going to spill over below the image.
-- If you really want text to stay together around an image, you can use the "float" property that we've discussed before.
-
-Code.
-
-    img { float: left; }
-
-## Text Images: Float Left
-
-![The image floats to the left of the text.](images/image_float_left.png)
-
-# Tables
-
-## Tables
-
-Tables are used to **tabular data**. In other words, this is used to represent data on screen in much the same way that a spreadsheet represents data: using rows and columns of cells.
-
-When learning about tables, you'll see that you could implement complex page layouts using tables. In the past, this was the only way to produce complex layouts. Now, using tables to do design work is considered a bad practice and you should focus on CSS.
-
-## Tables
-
-Tables are represented by **rows** of data. Inside each row, there are **cells**.  There are four tags which you must remember:
-
-- **table** defines a table.
-- **tr** defines a row within that table. (Think "table row".)
-- **th** defines a header cell within a row. (Think "table header".)
-- **td** defines a data cell within a row. (Think "table data".)
-
-## Additional HTML tags
-
-Everything regarding a table exists between the **table** tag. Here are three additional, less commonly used, tags to remember:
-
-- thead: the header rows
-- tbody: the body rows
-- tfoot: the footer rows
-
-These tags are used to wrap rows of data (defined by the **tr** tag). Like "header" and "footer", these are semantic tags and don't have a special functionality. You can find examples of these tags in action in the book.
-
-## Example of a table.
-
-    <h1>Baseball batting averages</h1>
-    <table>
-        <tr><th>Name</th><th>Average</th></tr>
-        <tr><td>Babe Ruth</td><td>0.342</td></tr>
-        <tr><td>Hank Aaron</td><td>0.305</td></tr>
-    </table> 
-
-Notice that the first row used "th" cells because those are headers. Every row after the first used "td" cells, because those contain data.
-
-## Tables and CSS
-
-- Tables will automatically resize rows and columns based on the length and width of the data within.
-- By default, tables have no border.
-- By default, the "th" tag presents data using a bold typeface.
-- Tables can be further customized using CSS.
-    - There is nothing original about the CSS used to define tables, so you can consult the book if you would like additional information.
-
-# Forms
-
-## Forms
-
-Form elements are used to send data to a webserver or to a JavaScript application. We will be using form elements in the second half of the course when we cover JavaScript. For now, I just want you to know what these elements look like. We'll talk about what they do, but we don't know enough just yet to demonstrate what they do.
-
-For the most part, form elements should exist inside of the "form" tag. There are some exceptions to this rule that we won't cover.
-
-## The "form" element
-
-You can have multiple forms on a page. Anything that requires text input should be defined as a form. For example, a website might have a search function (a form) and a login function (a different form).
-
-For now, we will use a form with no attributes. When we move to JavaScript, we will start adding more to this tag.
-
-    <!-- Our first form! -->
-    <form>
-        <!-- form elements go here -->
-    </form>
-
-    <!-- Another form! -->
-    <form>
-    </form>
-
-## The "input" element : Text
-
-There are many input mechanisms in HTML. Rather than give a unique tag to each of them, several input mechanisms are wrapped into a single element "input". In order to decide which mechanism that you need, you include the "type" attribute. The most basic of these types is the "text". It creates a single-line text input box on the screen.
-
-    <form>
-        <input type="text">
-    </form>
-
-## The "input" element : Submit
-
-In order to say that you are finished typing and wish for a website to do something, you "submit" the form data. The type for this is called "submit".
-
-    <form>
-        <input type="text">
-        <input type="submit">
-    </form>
-
-## The "input" element : Reset
-
-I have no idea why this element exists, but the "reset" type will clear your input form with a button click. Have you ever filled out a long form and wanted to go away with the click of a button? Of course not. This still exists.
-
-    <form>
-        <input type="text">
-        <input type="submit">
-        <input type="reset">
-    </form>
-
-Try this out. Fill out some text in the text field and click "Reset". It's gone!
-
-## The "input" element : Checkbox
-
-Checkboxes allow you to select multiple items of a particular group. You might have multiple favorite colors. Let's play with this example.
-
-    <form>
-    <input type="checkbox" name="color" value="red"> Red
-    <input type="checkbox" name="color" value="green"> Green
-    <input type="checkbox" name="color" value="blue"> Blue
-    </form>
-
-## The "input" element : Radio
-
-Radio buttons work like the mechanical radio buttons in an old car. Those old radios would only let you select one of something.
-
-    <form>
-    <input type="radio" name="grade" value="A"> A
-    <input type="radio" name="grade" value="B"> B
-    <input type="radio" name="grade" value="C"> C
-    <input type="radio" name="grade" value="D"> D
-    <input type="radio" name="grade" value="F"> F
-    </form>
-
-## The button element
-
-The button element makes a button. That's it. It has a type attribute that must be set to "button". I realize this is odd. It also requires an ending tag.
-
-    <button type="button">Click me!</button>
-
-## The "select" element
-
-The select element defines a dropdown menu.
-
-    <select name="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
-    </select>
-
-(I pulled this example off of w3schools.com.)
-
-## The "textarea" element
-
-The textarea element allows you to create a multiline input field.
-
-    <textarea name="message" rows="10" cols="30">
-    The cat was playing in the garden.
-    </textarea>
+We would like for you to find more fonts and icons and add them to your website.
