@@ -149,7 +149,7 @@ But what if you want more fonts? Crazy fonts? Fun fonts? Serious fonts?
 
 We are going to introduce our first **external library**. An **external library** gives us the ability to do things that would normally take us a long time to develop on our own. Nearly all professional programmers use external libraries to speed up development because programming is slow and its better when we all work together.
 
-Go to this website: https:/fonts.google.com
+Go to this website: https://fonts.google.com
 
 ## Google Fonts
 
