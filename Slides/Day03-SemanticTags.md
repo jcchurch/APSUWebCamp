@@ -92,7 +92,7 @@ These tags don't do anything special. All of these tags look the same and no one
 
 ## Designing a website
 
-When we design websites, we typically scetch up where these four primary elements will go.
+When we design websites, we typically sketch up where these four primary elements will go.
 
 ![Mockup with Basic Elements](images/mockup.png)
 
