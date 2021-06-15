@@ -202,7 +202,7 @@ We need an unordered list of links.
     <ul>
     <li><a href="http://apsu.edu">APSU</a></li>
     <li><a href="https://google.com">Google</a></li>
-    <li><a href="http://bongo.cat">Bongo Cat</a></li>
+    <li><a href="http://freerice.com">Free Rice</a></li>
     </ul>
     </nav>
 
@@ -256,7 +256,7 @@ For this, you'll need make sure the icons library is loaded in the `<head>` sect
 
 - For APSU, I found the icon "school".
 - For Google, I found the icon "search".
-- For BongoCat, I found the icon "pet".
+- For Free Rice, I found the icon "rice_bowl".
 
 I searched all three of these terms in the icon search (make sure you get the "Filled" version) and worked them into my HTML.
 
@@ -268,8 +268,8 @@ I searched all three of these terms in the icon search (make sure you get the "F
             <a href="http://apsu.edu">APSU</a></li>
         <li><span class="material-icons">search</span>
             <a href="https://google.com">Google</a></li>
-        <li><span class="material-icons">pets</span>
-            <a href="http://bongo.cat">Bongo Cat</a></li>
+        <li><span class="material-icons">rice_bowl</span>
+            <a href="http://freerice.com">Free Rice</a></li>
         </ul>
     </nav>
 
