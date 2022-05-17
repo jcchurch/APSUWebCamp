@@ -50,16 +50,16 @@ Pick one and store your passwords. Make sure they are all long, random, and diff
 - bitwarden
 - Last Pass
 - 1password
-- myki
+- NordPass
 
-## Finally, use 2FA.
+## Finally, use MFA.
 
-- Lots of websites offer something called "Two Factor Authentication" or "2FA".
+- Lots of websites offer something called "Multiple Factor Authentication" or "MFA".
 - This requires that you install a special authentication application (like **Authy**) to your phone.
 - After you log into a website, the website will ask you to type in a code from the app on your phone.
 - Turn this feature on for every website that offers 2FA.
-    - Websites that offer 2FA: Google, Facebook, Instagram, Amazon, Twitch, and Twitter.
-- 2FA is a second step to logging into a website, but it makes it harder for hackers to get in.
+    - Websites that offer MFA: Google, Facebook, Instagram, Amazon, Twitch, and Twitter.
+- MFA is a second step to logging into a website, but it makes it harder for hackers to get in.
 
 # Design Time
 
@@ -106,7 +106,7 @@ Next, we add example content to those basic areas.
 
 - The best way to learn is to do.
 - It's time to practice website design.
-- Your task is to design a website in which you would like to design.
+- Your task is to design your dream website.
     - My favorite web design tool is just a pencil and paper.
     - If you don't want to draw, we encourage you to use Microsoft Paint.
     - Make sure you include the four areas: header, main, sidebar, and footer
@@ -117,6 +117,10 @@ Next, we add example content to those basic areas.
 - If it helps, go find some images for your website.
 
 # Coding Time
+
+## Start a new website.
+
+Let's return to VS Code and start a new HTML file.
 
 ## Let's code the header section.
 

@@ -16,7 +16,7 @@ What did we talk about in the last class?
 
 ## Let's code a fresh website from scratch.
 
-Let's build a complete website using most of what we learned yesterday. I'm going to add the `coolcat.png` file to my page so that I can use it in examples later.
+Let's build a complete website using most of what we learned yesterday. Make sure your page uses at least one image.
 
 ## Play the video on Internet Safety
 
@@ -33,7 +33,7 @@ What did you think?
     - You aren't obligated to follow anyone and no one is obligated to follow you.
 - Don't compare your hidden life to another person's highlight reel.
     - In other words, everyone has flaws so don't worry about it when other people seem flawless.
-- Finally, computer-related addition is real, so know when to walk away when it is too much.
+- Finally, computer-related addictions is real, so know when to walk away when it is too much.
     - People with addictions aren't bad. They just need a little help.
 # More Features of HTML
 
@@ -53,7 +53,15 @@ Add some more links to your website.
 
 - Create a link to your favorite website.
 - Create a link to Austin Peay! http://apsu.edu
-- Create a link to a site about your favorite movie using an image. This will require you to find an image and display it on your page and then write the `<a>` tag with the proper **href** around the image.
+- Create a link to a site about your favorite movie, band, or book using an image. This will require you to find an image (use Unsplash!) and display it on your page and then write the `<a>` tag with the proper **href** around the image.
+
+## Putting an image in a link
+
+Here's the code for image that will take you to google.com. This example assumes we have a file named "google.png".
+
+    <a href="http://www.google.com">
+       <img src="google.png" alt="Google">
+    </a>
 
 ## Lists
 
@@ -75,13 +83,12 @@ See how the two lists are different? We use unordered lists when we want to grou
 
 ## Pop Quiz
 
-Pop quiz: What letters of the alphabet do "unordered" and "ordered" begin with?
+Pop quiz: What letters of the alphabet do "unordered list" and "ordered list" begin with?
 
 ## Unordered lists
 
 Unordered list should be used for information which can be rearranged into any order. The tag for creating an unordered list is **ul** (for "unordered list").                                           
-
-    <p>Here are some colors.<p>
+    <p>Here are my favorite colors.</p>
     <ul>
         <li>orange</li>
         <li>purple</li>
@@ -94,7 +101,7 @@ You'll notice that each element in the list is organized using the "li" tag (for
 
 Ordered lists should be used for information which should be presented in a specific order. The tag for creating an ordered list is **ol** (for "ordered list").
 
-    <p>Here are the classifications of student<p>
+    <p>Here are the classifications of student</p>
     <ol>
         <li>freshman</li>
         <li>sophomore</li>
@@ -123,7 +130,7 @@ Our page looks ugly. There are only two colors. The images are misshappen. We ne
         <link rel="stylesheet" href="style.css">
     </head>
 
-See that part that references the file `style.css`? We need to make this file. You can do this easily in Visual Studio Code by holding the CTRL button and clicking on the "style.css" that you just typed. It will ask you if you wish to make the file.
+See that part that references the file `style.css`? We need to make this file. You can do this easily in Visual Studio Code by holding the CTRL button and clicking on the "style.css" that you just typed. VS Code will ask you if you wish to make the file.
 
 ## What is style and content?
 
@@ -152,7 +159,7 @@ We are now working with the file `style.css` and because of that, we write in a 
         background: green;
     }
 
-Save your file and reload your page. If you don't like the color, try a different color name. CSS understands several common color names and even some interesting ones like **coral**, **olive**, and **tomato**! Is tomato a color? In CSS, tomato is a color!
+Save all of your files and reload your page. If you don't like the color, try a different color name. CSS understands several common color names and even some interesting ones like **coral**, **olive**, and **tomato**! Is tomato a color? In CSS, tomato is a color!
 
 ## Practice Time
 
@@ -171,11 +178,11 @@ If the background color is changed with "background," what do you think changes 
         color: tomato;
     }
 
-Save your file and reload your page. Don't forget the semicolons! We have to admit that tomato on green is a really bad color combination. Change this to something that looks nicer.
+Save your files and reload your page. Don't forget the semicolons! We have to admit that tomato on green is a really bad color combination. Change this to something that looks nicer.
 
 ## Changing an image size.
 
-How many images do you have on your page? You'll need at least three. I want you to have at least two images of one type and a third image that will be excluded. Take a moment to add images to your page until you have at least three. If you need help, raise your hand.
+How many images do you have on your page? You'll need at least three. I want you to have at least two images of one type and a third image that will be excluded (for example, two animals and one car). Take a moment to add images to your page until you have at least three. If you need help, raise your hand.
 
 ## Changing an image size.
 
@@ -189,11 +196,11 @@ This will cause all images to show up as 300 screen pixels wide. This causes som
 
 ## Changing an image size
 
-Let's return to the cool cat image. You can name any element in HTML using an `id` attribute. Let's do this. Back in your `index.html` file, find an image an name it.
+Let's return to the cool cat image. You can name any element in HTML using an `id` attribute. Let's do this. Back in your `index.html` file, find an image an name it using the "id" attribute.
 
     <img src="coolcat.png" alt="a cool cat" id="coolcat">
 
-This image is now officially named "coolcat".
+This image is now officially named "coolcat". Remember: names are case-sensitive, meaning that "coolcat" is different from "CoolCat" and "COOLCAT". Also, you can't use spaces in your names!
 
 ## Resizing "coolcat"
 
@@ -203,11 +210,11 @@ To resize a named element, we put the "#" symbol in front of the name in our CSS
         width: 300px;
     }
 
-Now, the "coolcat" image is 300px, but every other image is the original size. CSS IDs begin with a number sign (aka the pound sign, aka the hashtag symbol, aka the tik-tac-toe board).
+Now, the "coolcat" image is 300 screen pixels wide, but every other image is the original size. CSS IDs begin with a number sign (aka the pound sign, aka the hashtag symbol, aka the tik-tac-toe board).
 
 ## Classes
 
-A "class" in CSS is a special category of elements. For example, my document has both animal and non-animal pictures. Pick an type of image content in which you have multiple of in your document. I'm going to pick "animal". For each animal picture in my document, I'm going to add a class.
+A "class" in CSS is your own group of elements. For example, my document has both animal and non-animal pictures. Pick an type of image content in which you have multiple of in your document. I'm going to pick "animal". For each animal picture in my document, I'm going to add a class.
 
     <img src="coolcat.png" alt="a cool cat"
      id="coolcat" class="animal">
@@ -218,13 +225,13 @@ I've added `class="animal"` to every image which contains an animal.
 
 ## Let's modify the class
 
-To modify a class, we put a "." (a period) followed by the name of the class. Let's add a border around each of our selected elements.
+Return to your style.css file. To modify a class, we put a "." (a period) followed by the name of the class. Let's add a border around each of our selected elements.
 
     .animal {
         border: 10px solid blue;
     }
 
-Here, change "animal" to the class that you created. CSS classes begin with periods.
+Here, change "animal" to the class that you created. CSS classes begin with periods. Load your web page again.
 
 # The Box Model
 

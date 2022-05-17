@@ -42,7 +42,7 @@ What are some web browsers? This is software used to browse the World Wide Web.
 - Apple Safari
 - And more!
 
-Most browsers are free! Which one is your favorite? Is there one that we didn't mention?
+Most browsers are free to download! Which one is your favorite? Is there one that we didn't mention?
 
 ## Text Editors
 
@@ -67,9 +67,16 @@ If you use a Mac, we recommend that you download Brackets or Visual Studio Code.
 - Your ISP is your Internet Service Provider.
 - A **server** houses files and also has an IP address somewhere else in the world. Often, it will have a domain name, such as "google.com".
 
+## How does the web work?
+
+There are millions of computers on the Internet.
+
+- How do they talk to each other?
+- How do they find each other?
+
 ## So how does the Web work?
 
-It's pretty simple to explain. Simple is good! If you are on the internet, you are connected to an Internet Service Provider.
+If you are on the internet, you are connected to an Internet Service Provider.
 
 1. You type a website address or click a link. (Links contain addresses.)
 2. This tells the Internet Service Provider to go find the **server** for your address. 
@@ -78,7 +85,7 @@ It's pretty simple to explain. Simple is good! If you are on the internet, you a
 5. The Internet Service Provider sends the content to your computer.
 6. The web browser figures out how to display the content on your screen.
 
-## What is HTTP and HTML?
+## What is HTTP and HTML and the WWW?
 
 There are a lot of terms used on the Internet that you only know of by letters.
 
@@ -86,8 +93,10 @@ There are a lot of terms used on the Internet that you only know of by letters.
     - Hypertext Transfer Protocol is the instructions needed to send a file from one computer to another over the web.
 - HTML stands for Hypertext Markup Language.
     - Hypertext Markup Language is the programming language used to design websites, which is why you are here!
+- WWW stands for World Wide Web, or just "web" for short.
+    - The World Wide Web is the collection of all websites on the Internet, but most people just call this "the Internet."
 
-In short, you use HTTP to send HTML files over the WWW.
+In short, you use HTTP to send HTML files over the web.
 
 ## The Three Main Technologies of the Web
 
