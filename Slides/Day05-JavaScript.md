@@ -143,12 +143,133 @@ We still have the empty "greeting" div, but now we have an import form. The acti
 
 We've changed the "name =" line to get the **firstname** element's value. Everything else is the same. Try it.
 
-## Simple Math
+## The Magic 8-Ball
 
+The "Magic 8 Ball" is a toy that will say random things when you shake it. This example will require that we create a button to simulate "shaking."
 
+    <button
+        type="button"
+        onclick="javascript:shake8ball()"
+    >
+        Shake the Eight Ball
+    </button>
+
+    <div id="message"></div>
+
+This button will call "shake8ball()". The "div" element will be where our message will go.
+
+## Defining shake8ball()
+
+Let's define our shake8ball() function.
+
+    <script>
+    function shake8ball()
+    {
+        /*
+           Everything about our function
+           will go between the { and }.
+        */
+    }
+    </script>
+
+## Roll a number.
+
+The first line of shake8ball will roll a 3-sided die. A 3-sided die will produce the numbers 0, 1, or 2.
+
+    let roll = Math.floor(Math.random() * 3);
+
+Let's go over the parts of this line of code.
+
+- "let roll" defines a new variable named "roll".
+- "Math.random()" generates a random number between 0 and 1.
+- The "* 3" will multiply that random number by 3. Now it's somewhere between 0 and 3.
+- The "Math.floor(...)" will round the random number down. Now it will always be 0, 1, or 2.
+
+## Print a random message.
+
+This code creates a new variable called "message", then (based on roll), set a message.
+
+    let message = "";
+    if (roll == 0)
+        message = "It will certainly happen.";
+
+    if (roll == 1)
+        message = "I do not know. Ask again.";
+
+    if (roll == 2)
+        message = "The answer is no.";
+ 
+## Final touch.
+
+Now, we must present that message to the screen.
+
+    document.getElementById("message").innerHTML =
+        message;
+
+Only now will the message display on the screen.
+
+## Customize your code.
+
+Let's return to this line.
+
+    let roll = Math.floor(Math.random() * 3);
+
+The 3 represents the number of options. Make this number 10! I want you to add 7 more random statements to your magic 8 ball. You'll need to add "if" statements to your code to cover the new number 4 through 9. Make the messages a combination of serious, silly, or even mysterious (but never mean). Here are some suggestions.
+
+- I don't know, but I see tacos in your future!
+- I would avoid the sushi if I was you. It’s a little fishy.
+- I was addicted to the hokey pokey but I turned myself around.
+- Did you hear about the circus that caught on fire? It was in tents.
+
+# Event Driven Programming
+
+## Event Driven Programming
+
+Event Driven programming is writing code which responds to events, such as button clicks or page loads. There are many events which take place while browsing the web. Here are a few.
+
+- onclick: the user clicks on something.
+- ondblclick: the user double clicks on something
+- onchange: the text in a field changes.
+- onkeydown: the user presses a key on the keyboard.
+- onkeyup: the user lifts their finger off of a key.
+
+## Event Driven Programming: The Mouse
+
+Many events involve the mouse. The broswer has the ability to detect changes in your mouse movement and can respond to these changes.
+
+- onmousemove: the mouse moved
+- onmouseover: the mouse is over an element
+- onmouseout: the mouse has left an element
+- onmousedown: any mouse button is clicked
+- onmouseup: the user lifts their finger off of a mouse button click
+
+Notice that we can detect when the user clicks and finishes clicking a button. These can happen at different pointer locations on the screen and we can detect both.
+
+## Events with a Mouse
+
+Here's our JavaScript. We have two images which are required. This goes inside `<head>` tag.
+
+    <script>
+    let puppy = "puppy.png";
+    let coolcat = "coolcat.png";
+    let iguana = "iguana.png";
+    function setImage(element, myImage) {
+        element.setAttribute('src', myImage);
+    }
+    </script>
+
+## Events with a Mouse
+
+Here is our HTML.
+
+    <img src="iguana.png"
+         onmouseover="setImage(this, coolcat);"
+         onmouseout="setImage(this, iguana);"
+         onmousedown="setImage(this, puppy);"
+         onmouseup="setImage(this, iguana);"
+    >
 
 ## Rest of Class
 
 We will spend the rest of class going over additional examples.
-
 
